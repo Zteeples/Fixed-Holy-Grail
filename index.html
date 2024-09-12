@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Grail Layout</title>
+    <link rel="stylesheet" href="holy_grail_style.css">
+    <style>
+header {
+
+width: 90%;
+
+height: 100px;
+
+background-color: #0078D4;
+
+border: 3px solid #9C835D;
+
+padding: 10px;
+
+margin: 25px;
+
+}
+
+
+
+nav {
+
+position: fixed;
+
+width: 90%;
+
+height: 50px;
+
+background-color: #DEBB87;
+
+top: 170px;
+
+left: 35px;
+
+}
+
+
+
+article {
+
+color: whitesmoke;
+
+width: 65%;
+
+height: 200px;
+
+background-color: #004E8A;
+
+border: 5px solid #66615A;
+
+position: relative;
+
+top: 15px;
+
+}
+
+/*don't use left: and right: at the same time.  */
+
+aside {
+
+color: whitesmoke;
+
+width: 40%;
+
+height: 420px;
+
+background-color: #03233B;
+
+position: absolute;
+
+left: 50%;
+
+top: 235px;
+
+}
+
+
+
+footer {
+
+width: 100%;
+
+height: 50px;
+
+background-color: #DEBB87;
+
+position: fixed;
+
+bottom: 0px;
+
+}
+
+
+.articles {
+
+position: relative;
+
+left: 30px;
+
+top: 45px;
+
+width: 65%;
+
+height: 70%;
+
+}
+</style>
+</head>
+<body>
+
+    <header>
+        This is the header, which has no positioning applied, so it assumes the default, static. It has also been given margins and padding, which keep the edges 35 pixels away from the top and left borders of the page.
+    </header>
+
+    <nav>This nav bar is set to a fixed position and is located 170 pixels below the top of the page, due to its top positioning. It is 35 pixels to the right of the page due to its left positioning. </nav>
+
+    <div>
+
+        <div class="articles">
+
+            <article>This is the first article. It is located 15 pixels below the nav bar, because it is set to relative positioning with top positioning set to 15 pixels. </article>
+
+            <article>This is the second article. It is located 15 pixels below the first article, because it is also set to relative positioning and it is below the first article in the div.</article>
+
+        </div>
+
+    <aside>This is the aside. Its left border is located exactly in the middle of the page, because it is set to 50%. It is located 235 pixels below the top of the page, because of its top positioning.</aside>
+
+    </div>
+
+    <footer>This is the footer. It is located all the way at the bottom of the page because it is set to a fixed position and it has a bottom positioning of 0 pixels.</footer>
+</body>
+</html>
